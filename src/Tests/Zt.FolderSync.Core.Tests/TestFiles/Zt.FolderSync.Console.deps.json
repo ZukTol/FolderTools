@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Zt.FolderSync.Console/1.0.0": {
+        "dependencies": {
+          "Zt.FolderSync.Core": "1.0.0"
+        },
+        "runtime": {
+          "Zt.FolderSync.Console.dll": {}
+        }
+      },
+      "Zt.FolderSync.Core/1.0.0": {
+        "runtime": {
+          "Zt.FolderSync.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Zt.FolderSync.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Zt.FolderSync.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

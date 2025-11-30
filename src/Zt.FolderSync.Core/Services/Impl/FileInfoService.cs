@@ -2,8 +2,10 @@
 
 public class FileInfoService : IFileInfoService
 {
-    public FileInfo GetInfo()
+    public FileInfo GetInfo(string filePath)
     {
+        ArgumentException.ThrowIfNullOrEmpty(filePath);
+
         throw new NotImplementedException();
     }
 }

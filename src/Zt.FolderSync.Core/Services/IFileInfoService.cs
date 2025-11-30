@@ -2,5 +2,5 @@
 
 public interface IFileInfoService
 {
-    public FileInfo GetInfo();
+    public FileInfo GetInfo(string filePath);
 }
