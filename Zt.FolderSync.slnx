@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/Zt.FolderSync.Console/Zt.FolderSync.Console.csproj" Id="bd8304b1-0ee0-4174-9fd0-61a3a0acb18a" />
+  <Project Path="src/Zt.FolderSync.Core/Zt.FolderSync.Core.csproj" />
+</Solution>
