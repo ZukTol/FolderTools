@@ -22,4 +22,8 @@
       <ProjectReference Include="..\..\Zt.FolderSync.Core\Zt.FolderSync.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Services\" />
+    </ItemGroup>
+
 </Project>
