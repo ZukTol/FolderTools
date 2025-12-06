@@ -4,5 +4,5 @@ namespace Zt.FolderSync.Core.Services;
 
 public interface IFileSystemProvider
 {
-    DirectoryEntry GetDirectoryInfo(string path);
+    DirectoryEntry GetFolderInfo(string path);
 }
