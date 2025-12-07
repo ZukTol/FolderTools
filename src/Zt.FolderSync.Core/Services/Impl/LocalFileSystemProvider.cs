@@ -6,6 +6,8 @@ internal class LocalFileSystemProvider : IFileSystemProvider
 {
     public DirectoryEntry GetFolderInfo(string path)
     {
+        ArgumentException.ThrowIfNullOrEmpty(path);
+        
         var rootInfo = new DirectoryInfo(path);
         if (!rootInfo.Exists) 
             throw new DirectoryNotFoundException(path);

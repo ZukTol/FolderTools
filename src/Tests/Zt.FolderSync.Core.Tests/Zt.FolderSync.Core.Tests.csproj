@@ -10,6 +10,7 @@
     <ItemGroup>
         <PackageReference Include="coverlet.collector" Version="6.0.4"/>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1"/>
+        <PackageReference Include="Verify.Xunit" Version="31.8.0" />
         <PackageReference Include="xunit" Version="2.9.3"/>
         <PackageReference Include="xunit.runner.visualstudio" Version="3.1.4"/>
     </ItemGroup>
@@ -23,7 +24,18 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Services\" />
+      <None Update="TestFiles\Lorem Ipsum.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="TestFiles\vstroennye_shkafy_v_prihozhej_svetlye.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="TestFiles\Exes\Zt.FolderSync.Console.exe">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="TestFiles\Exes\Zt.FolderSync.Console.deps.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

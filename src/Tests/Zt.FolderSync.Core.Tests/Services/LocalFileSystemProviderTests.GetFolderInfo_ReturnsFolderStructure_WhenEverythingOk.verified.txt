@@ -1,0 +1,36 @@
+﻿{
+  Children: [
+    {
+      Size: 3090,
+      LastModified: DateTime_1,
+      Name: Lorem Ipsum.txt,
+      FullPath: {CurrentDirectory}TestFiles\Lorem Ipsum.txt
+    },
+    {
+      Size: 125667,
+      LastModified: DateTime_2,
+      Name: vstroennye_shkafy_v_prihozhej_svetlye.jpg,
+      FullPath: {CurrentDirectory}TestFiles\vstroennye_shkafy_v_prihozhej_svetlye.jpg
+    },
+    {
+      Children: [
+        {
+          Size: 868,
+          LastModified: DateTime_3,
+          Name: Zt.FolderSync.Console.deps.json,
+          FullPath: {CurrentDirectory}TestFiles\Exes\Zt.FolderSync.Console.deps.json
+        },
+        {
+          Size: 162816,
+          LastModified: DateTime_4,
+          Name: Zt.FolderSync.Console.exe,
+          FullPath: {CurrentDirectory}TestFiles\Exes\Zt.FolderSync.Console.exe
+        }
+      ],
+      Name: Exes,
+      FullPath: {CurrentDirectory}TestFiles\Exes
+    }
+  ],
+  Name: TestFiles,
+  FullPath: {CurrentDirectory}TestFiles
+}
