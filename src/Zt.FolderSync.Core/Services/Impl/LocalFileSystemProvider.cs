@@ -1,4 +1,5 @@
-﻿using Zt.FolderSync.Core.Models;
+﻿using System.Security.Cryptography;
+using Zt.FolderSync.Core.Models;
 
 namespace Zt.FolderSync.Core.Services.Impl;
 
@@ -25,18 +26,29 @@ internal class LocalFileSystemProvider : IFileSystemProvider
             Children = []
         };
 
-        foreach (var fileInfo in directoryInfo.EnumerateFiles())
+        try
         {
-            var fileEntry = GetFileInfoInternal(fileInfo);
-            directoryEntry.Children.Add(fileEntry);
-        }
-        
-        foreach (var subDirInfo in directoryInfo.EnumerateDirectories())
-        {
-            if ((subDirInfo.Attributes & FileAttributes.System) == 0)
+            foreach (var fileInfo in directoryInfo.EnumerateFiles())
             {
-                directoryEntry.Children.Add(GetFolderInfoInternal(subDirInfo));
+                var fileEntry = GetFileInfoInternal(fileInfo);
+                directoryEntry.Children.Add(fileEntry);
             }
+
+            foreach (var subDirInfo in directoryInfo.EnumerateDirectories())
+            {
+                if ((subDirInfo.Attributes & FileAttributes.System) == 0)
+                {
+                    directoryEntry.Children.Add(GetFolderInfoInternal(subDirInfo));
+                }
+            }
+        }
+        catch (UnauthorizedAccessException)
+        {
+            Console.WriteLine($"Access denied for path: {directoryInfo.FullName}");
+        }
+        catch (Exception ee)
+        {
+            Console.WriteLine($"Exception: {ee}");
         }
         
         return directoryEntry;
@@ -49,8 +61,17 @@ internal class LocalFileSystemProvider : IFileSystemProvider
             FullPath = fileInfo.FullName,
             Name = fileInfo.Name,
             LastModified = fileInfo.LastWriteTimeUtc,
-            Size = fileInfo.Length
+            Size = fileInfo.Length,
+            Hash = CalculateFileHash(fileInfo.FullName)
         };
         return fileEntry;
+    }
+    
+    private static string CalculateFileHash(string filePath)
+    {
+        using var sha256 = SHA256.Create();
+        using var stream = File.OpenRead(filePath);
+        var hashBytes = sha256.ComputeHash(stream);
+        return Convert.ToHexStringLower(hashBytes);
     }
 }
