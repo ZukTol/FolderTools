@@ -22,8 +22,7 @@ internal class LocalFileSystemProvider : IFileSystemProvider
         var directoryEntry = new DirectoryEntry
         {
             FullPath = directoryInfo.FullName,
-            Name = directoryInfo.Name,
-            Children = []
+            Name = directoryInfo.Name
         };
 
         try

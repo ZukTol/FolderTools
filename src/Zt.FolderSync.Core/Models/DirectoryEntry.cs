@@ -2,5 +2,5 @@
 
 public class DirectoryEntry : FileSystemEntry
 {
-    public List<FileSystemEntry> Children { get; set; }
+    public List<FileSystemEntry> Children { get; } = [];
 }
