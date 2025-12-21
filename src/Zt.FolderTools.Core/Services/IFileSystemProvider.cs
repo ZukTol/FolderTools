@@ -1,6 +1,6 @@
-﻿using Zt.FolderSync.Core.Models;
+﻿using Zt.FolderTools.Core.Models;
 
-namespace Zt.FolderSync.Core.Services;
+namespace Zt.FolderTools.Core.Services;
 
 public interface IFileSystemProvider
 {

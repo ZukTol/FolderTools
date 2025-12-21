@@ -1,5 +1,6 @@
 ﻿using System.Security.Cryptography;
-using Zt.FolderSync.Core.Models;
+using Zt.FolderTools.Core.Models;
+using Zt.FolderTools.Core.Services;
 
 namespace Zt.FolderSync.Core.Services.Impl;
 

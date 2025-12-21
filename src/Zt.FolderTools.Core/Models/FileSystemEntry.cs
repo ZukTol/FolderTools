@@ -1,4 +1,4 @@
-﻿namespace Zt.FolderSync.Core.Models;
+﻿namespace Zt.FolderTools.Core.Models;
 
 public class FileSystemEntry
 {

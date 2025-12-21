@@ -1,6 +1,6 @@
 ﻿using Zt.FolderSync.Core.Services.Impl;
 
-namespace Zt.FolderSync.Core.Tests.Services;
+namespace Zt.FolderTools.Core.Tests.Services;
 
 public class LocalFileSystemProviderTests
 {

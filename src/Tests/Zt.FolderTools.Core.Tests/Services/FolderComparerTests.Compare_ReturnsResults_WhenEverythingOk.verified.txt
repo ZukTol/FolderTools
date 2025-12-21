@@ -1,0 +1,70 @@
+﻿[
+  {
+    Status: Different,
+    LeftEntry: {
+      Size: 3090,
+      LastModified: DateTime_1,
+      Hash: 9c3559dcab87b6ab9d42cb2e554ae3c42961dd49d183b3ae82c677bb19274e08,
+      Name: Lorem Ipsum.txt,
+      FullPath: {CurrentDirectory}TestFiles\Lorem Ipsum.txt
+    },
+    RightEntry: {
+      Size: 2508,
+      LastModified: DateTime_2,
+      Hash: 4599eae8c46255de8f06ef269fbfafc7bbea6a542a7e4e7c91fc94b484fd2bd9,
+      Name: Lorem Ipsum.txt,
+      FullPath: {CurrentDirectory}TestFilesSecond\Lorem Ipsum.txt
+    },
+    RelativePath: Lorem Ipsum.txt
+  },
+  {
+    Status: LeftOnly,
+    LeftEntry: {
+      Size: 125667,
+      LastModified: DateTime_3,
+      Hash: 0f1d4eb3ed2c7187a885323906fa331c9d9f13d9c423b87c63c772f2168fb9b6,
+      Name: vstroennye_shkafy_v_prihozhej_svetlye.jpg,
+      FullPath: {CurrentDirectory}TestFiles\vstroennye_shkafy_v_prihozhej_svetlye.jpg
+    },
+    RelativePath: vstroennye_shkafy_v_prihozhej_svetlye.jpg
+  },
+  {
+    Status: LeftOnly,
+    LeftEntry: {
+      Size: 868,
+      LastModified: DateTime_4,
+      Hash: 5c9be46e6c526a43d6a8d12f02ecc5e78bd44854edfb04d29c46cff55944daea,
+      Name: Zt.FolderSync.Console.deps.json,
+      FullPath: {CurrentDirectory}TestFiles\Exes\Zt.FolderSync.Console.deps.json
+    },
+    RelativePath: Exes\Zt.FolderSync.Console.deps.json
+  },
+  {
+    LeftEntry: {
+      Size: 162816,
+      LastModified: DateTime_5,
+      Hash: c9d6626aa8d50f11cfaa7a631479495858537a997451a78eb915944e7d0027b9,
+      Name: Zt.FolderSync.Console.exe,
+      FullPath: {CurrentDirectory}TestFiles\Exes\Zt.FolderSync.Console.exe
+    },
+    RightEntry: {
+      Size: 162816,
+      LastModified: DateTime_5,
+      Hash: c9d6626aa8d50f11cfaa7a631479495858537a997451a78eb915944e7d0027b9,
+      Name: Zt.FolderSync.Console.exe,
+      FullPath: {CurrentDirectory}TestFilesSecond\Exes\Zt.FolderSync.Console.exe
+    },
+    RelativePath: Exes\Zt.FolderSync.Console.exe
+  },
+  {
+    Status: RightOnly,
+    RightEntry: {
+      Size: 11,
+      LastModified: DateTime_6,
+      Hash: fc52c7c520e1d1d5a68dca670835e27cd8397ebfdee4eedc712268c451114f40,
+      Name: Unknown.txt,
+      FullPath: {CurrentDirectory}TestFilesSecond\Exes\Unknown.txt
+    },
+    RelativePath: Exes\Unknown.txt
+  }
+]

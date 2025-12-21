@@ -8,8 +8,4 @@
     <LangVersion>14</LangVersion>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Zt.FolderSync.Core\Zt.FolderSync.Core.csproj" />
-  </ItemGroup>
-
 </Project>
