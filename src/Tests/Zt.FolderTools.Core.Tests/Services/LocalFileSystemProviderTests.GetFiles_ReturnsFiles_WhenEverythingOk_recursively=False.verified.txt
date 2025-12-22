@@ -1,0 +1,16 @@
+﻿[
+  {
+    Size: 3090,
+    LastModified: DateTime_1,
+    Hash: 9c3559dcab87b6ab9d42cb2e554ae3c42961dd49d183b3ae82c677bb19274e08,
+    Name: Lorem Ipsum.txt,
+    FullPath: {CurrentDirectory}TestFiles\Lorem Ipsum.txt
+  },
+  {
+    Size: 125667,
+    LastModified: DateTime_2,
+    Hash: 0f1d4eb3ed2c7187a885323906fa331c9d9f13d9c423b87c63c772f2168fb9b6,
+    Name: vstroennye_shkafy_v_prihozhej_svetlye.jpg,
+    FullPath: {CurrentDirectory}TestFiles\vstroennye_shkafy_v_prihozhej_svetlye.jpg
+  }
+]

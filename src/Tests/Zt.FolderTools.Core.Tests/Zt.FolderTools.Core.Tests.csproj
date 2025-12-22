@@ -45,6 +45,12 @@
       <None Update="TestFiles\Exes\Zt.FolderSync.Console.deps.json">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+      <None Update="Services\LocalFileSystemProviderTests.GetFiles_ReturnsFiles_WhenEverythingOk_recursively=False.verified.txt">
+        <DependentUpon>LocalFileSystemProviderTests.cs</DependentUpon>
+      </None>
+      <None Update="Services\LocalFileSystemProviderTests.GetFiles_ReturnsFiles_WhenEverythingOk_recursively=True.verified.txt">
+        <DependentUpon>LocalFileSystemProviderTests.cs</DependentUpon>
+      </None>
     </ItemGroup>
 
 </Project>

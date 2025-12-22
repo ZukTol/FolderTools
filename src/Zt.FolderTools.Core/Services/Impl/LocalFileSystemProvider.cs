@@ -1,20 +1,30 @@
 ﻿using System.Security.Cryptography;
 using Zt.FolderTools.Core.Models;
-using Zt.FolderTools.Core.Services;
 
-namespace Zt.FolderSync.Core.Services.Impl;
+namespace Zt.FolderTools.Core.Services.Impl;
 
 internal class LocalFileSystemProvider : IFileSystemProvider
 {
-    public DirectoryEntry GetFolderInfo(string path)
+    public DirectoryEntry GetFolderInfo(string folderPath)
     {
-        ArgumentException.ThrowIfNullOrEmpty(path);
+        ArgumentException.ThrowIfNullOrEmpty(folderPath);
         
-        var rootInfo = new DirectoryInfo(path);
+        var rootInfo = new DirectoryInfo(folderPath);
         if (!rootInfo.Exists) 
-            throw new DirectoryNotFoundException(path);
+            throw new DirectoryNotFoundException(folderPath);
         
         var result = GetFolderInfoInternal(rootInfo);
+        return result;
+    }
+
+    public IReadOnlyList<FileEntry> GetFiles(string folderPath, bool recursively)
+    {
+        ArgumentException.ThrowIfNullOrEmpty(folderPath);
+        var directoryInfo = new DirectoryInfo(folderPath);
+        var result = directoryInfo.EnumerateFiles("*", 
+            recursively ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly)
+            .Select(GetFileInfoInternal)
+            .ToArray();
         return result;
     }
 
