@@ -1,4 +1,4 @@
-﻿namespace Zt.FolderTools.Core.Models;
+﻿namespace Zt.FolderTools.Core.Models.FileSystem;
 
 public class FileSystemEntry
 {

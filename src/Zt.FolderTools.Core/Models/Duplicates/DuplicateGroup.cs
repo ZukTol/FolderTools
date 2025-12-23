@@ -1,4 +1,6 @@
-﻿namespace Zt.FolderTools.Core.Models.Duplicates;
+﻿using Zt.FolderTools.Core.Models.FileSystem;
+
+namespace Zt.FolderTools.Core.Models.Duplicates;
 
 public class DuplicateGroup(string groupName)
 {

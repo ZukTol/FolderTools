@@ -1,4 +1,4 @@
-﻿using Zt.FolderTools.Core.Models;
+﻿using Zt.FolderTools.Core.Models.FileSystem;
 
 namespace Zt.FolderTools.Core.Services.Impl;
 

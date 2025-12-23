@@ -1,4 +1,6 @@
-﻿namespace Zt.FolderTools.Core.Models;
+﻿using Zt.FolderTools.Core.Models.FileSystem;
+
+namespace Zt.FolderTools.Core.Models.FolderSync;
 
 public class ComparisonResult(EntryStatus status, FileSystemEntry? leftEntry, FileSystemEntry? rightEntry, string relativePath)
 {

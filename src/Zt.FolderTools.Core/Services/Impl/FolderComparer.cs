@@ -1,7 +1,8 @@
 ﻿using Zt.FolderTools.Core.Models;
-using Zt.FolderTools.Core.Services;
+using Zt.FolderTools.Core.Models.FileSystem;
+using Zt.FolderTools.Core.Models.FolderSync;
 
-namespace Zt.FolderSync.Core.Services.Impl;
+namespace Zt.FolderTools.Core.Services.Impl;
 
 public class FolderComparer : IFolderComparer
 {
