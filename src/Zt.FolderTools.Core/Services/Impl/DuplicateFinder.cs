@@ -5,15 +5,41 @@ namespace Zt.FolderTools.Core.Services.Impl;
 
 public class DuplicateFinder(IFileSystemProvider fileSystemProvider) : IDuplicateFinder
 {
-    public IReadOnlyList<DuplicateGroup> GetDuplicates(IReadOnlyList<FileEntry> fileEntries)
+    public Task<IReadOnlyList<DuplicateGroup>> GetDuplicatesAsync(
+        string folderPath, 
+        IFileComparisonStrategy fileComparisonStrategy,
+        CancellationToken token)
     {
-        throw new NotImplementedException();
-    }
-
-    public IReadOnlyList<DuplicateGroup> GetDuplicates(string folderPath)
-    {
+        ArgumentException.ThrowIfNullOrEmpty(folderPath);
+        ArgumentNullException.ThrowIfNull(fileComparisonStrategy);
+        
         var files = fileSystemProvider.GetFiles(folderPath, recursively: true);
         
-        throw new NotImplementedException();
+        return GetDuplicatesAsync(files, fileComparisonStrategy, token);
+    }
+    
+    public async Task<IReadOnlyList<DuplicateGroup>> GetDuplicatesAsync(
+        IReadOnlyList<FileEntry> fileEntries,
+        IFileComparisonStrategy fileComparisonStrategy,
+        CancellationToken token)
+    {
+        ArgumentNullException.ThrowIfNull(fileEntries);
+        ArgumentNullException.ThrowIfNull(fileComparisonStrategy);
+        
+        var potentialDuplicates = fileEntries
+            .GroupBy(f => f.Size)
+            .Where(g => g.Count() > 1)
+            .ToArray();
+
+        var finalResults = new List<DuplicateGroup>(potentialDuplicates.Length);
+        
+        foreach (var sizeGroup in potentialDuplicates)
+        {
+            token.ThrowIfCancellationRequested();
+
+            var duplicates = await fileComparisonStrategy.FindDuplicatesAsync(sizeGroup, token);
+            finalResults.AddRange(duplicates);
+        }
+        return finalResults;
     }
 }

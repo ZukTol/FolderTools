@@ -5,7 +5,13 @@ namespace Zt.FolderTools.Core.Services;
 
 public interface IDuplicateFinder
 {
-    IReadOnlyList<DuplicateGroup> GetDuplicates(IReadOnlyList<FileEntry> fileEntries);
-    
-    IReadOnlyList<DuplicateGroup> GetDuplicates(string folderPath);
+    Task<IReadOnlyList<DuplicateGroup>> GetDuplicatesAsync(
+        IReadOnlyList<FileEntry> fileEntries,
+        IFileComparisonStrategy fileComparisonStrategy,
+        CancellationToken token);
+
+    Task<IReadOnlyList<DuplicateGroup>> GetDuplicatesAsync(
+        string folderPath,
+        IFileComparisonStrategy fileComparisonStrategy,
+        CancellationToken token);
 }
