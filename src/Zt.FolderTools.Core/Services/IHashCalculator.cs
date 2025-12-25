@@ -2,7 +2,7 @@
 
 public interface IHashCalculator
 {
-    string CalculateHash(string filePathult);
+    string CalculateHash(string filePath);
     
     Task<string> CalculateHashAsync(string filePath, CancellationToken token = default);
 }

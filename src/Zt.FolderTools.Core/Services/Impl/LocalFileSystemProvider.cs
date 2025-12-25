@@ -71,6 +71,7 @@ internal class LocalFileSystemProvider : IFileSystemProvider
             Name = fileInfo.Name,
             LastModified = fileInfo.LastWriteTimeUtc,
             Size = fileInfo.Length,
+            Extension = fileInfo.Extension
             // Hash = CalculateFileHash(fileInfo.FullName)
         };
         return fileEntry;

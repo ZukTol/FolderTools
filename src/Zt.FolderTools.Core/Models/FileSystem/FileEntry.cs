@@ -6,5 +6,7 @@ public class FileEntry : FileSystemEntry
     
     public DateTime LastModified { get; set; }
     
+    public string Extension { get; set; }
+    
     public string? Hash { get; set; }
 }

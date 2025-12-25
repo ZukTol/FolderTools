@@ -7,7 +7,7 @@ public interface IFileComparisonStrategy
 {
     string Name { get; }
     
-    Task<IEnumerable<DuplicateGroup>> FindDuplicatesAsync(
+    Task<IReadOnlyList<DuplicateGroup>> FindDuplicatesAsync(
         IEnumerable<FileEntry> candidates, 
         CancellationToken token);
 }
