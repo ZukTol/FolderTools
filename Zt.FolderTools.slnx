@@ -1,7 +1,10 @@
 <Solution>
+  <Folder Name="/Apps/">
+    <Project Path="src/Apps/Zt.DuplicateFinder.Console/Zt.DuplicateFinder.Console.csproj" />
+    <Project Path="src/Zt.FolderSync.Console/Zt.FolderSync.Console.csproj" Id="bd8304b1-0ee0-4174-9fd0-61a3a0acb18a" />
+  </Folder>
   <Folder Name="/Tests/">
     <Project Path="src/Tests/Zt.FolderTools.Core.Tests/Zt.FolderTools.Core.Tests.csproj" />
   </Folder>
-  <Project Path="src/Zt.FolderSync.Console/Zt.FolderSync.Console.csproj" Id="bd8304b1-0ee0-4174-9fd0-61a3a0acb18a" />
   <Project Path="src/Zt.FolderTools.Core/Zt.FolderTools.Core.csproj" />
 </Solution>

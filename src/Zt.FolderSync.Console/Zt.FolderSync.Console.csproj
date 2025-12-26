@@ -8,4 +8,8 @@
     <LangVersion>14</LangVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Zt.FolderTools.Core\Zt.FolderTools.Core.csproj" />
+  </ItemGroup>
+
 </Project>
