@@ -46,7 +46,7 @@ internal class Commands
         if(!string.IsNullOrEmpty(outputFile))
             File.Delete(outputFile);
         
-        foreach (var duplicateGroup in duplicates)
+        foreach (var duplicateGroup in duplicates.OrderByDescending(x=>x.Files[0].Size))
         {
             var groupName = $"{duplicateGroup.GroupName[..10]}, Size: {ConvertSize(duplicateGroup.Files[0].Size)}";
             if (!string.IsNullOrEmpty(outputFile))
