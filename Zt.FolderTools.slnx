@@ -1,9 +1,7 @@
 <Solution>
-  <Folder Name="/Apps/">
-    <Project Path="src/Apps/Zt.DuplicateFinder.Console/Zt.DuplicateFinder.Console.csproj" />
-  </Folder>
   <Folder Name="/Tests/">
     <Project Path="src/Tests/Zt.FolderTools.Core.Tests/Zt.FolderTools.Core.Tests.csproj" />
   </Folder>
   <Project Path="src/Zt.FolderTools.Core/Zt.FolderTools.Core.csproj" />
+  <Project Path="src/Zt.FolderTools.Console/Zt.FolderTools.Console.csproj" />
 </Solution>

@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\Zt.FolderTools.Core\Zt.FolderTools.Core.csproj" />
+      <ProjectReference Include="..\Zt.FolderTools.Core\Zt.FolderTools.Core.csproj" />
     </ItemGroup>
 
 </Project>
