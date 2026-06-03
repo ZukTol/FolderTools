@@ -76,4 +76,14 @@ internal class LocalFileSystemProvider : IFileSystemProvider
         };
         return fileEntry;
     }
+
+    public void DeleteFile(string filePath)
+    {
+        File.Delete(filePath);
+    }
+
+    public void DeleteFolder(string folderPath, bool recursive)
+    {
+        Directory.Delete(folderPath, recursive);
+    }
 }
